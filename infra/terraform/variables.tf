@@ -32,7 +32,7 @@ variable "aks_subnet_cidr" {
 
 variable "system_node_vm_size" {
   type    = string
-  default = "Standard_D2s_v5"
+  default = "Standard_DC2s_v3"
 }
 
 variable "tags" {
