@@ -49,10 +49,10 @@ resource "azurerm_kubernetes_cluster" "aks" {
     type            = "VirtualMachineScaleSets"
     os_disk_size_gb = 50
 
-    enable_auto_scaling = true
-    min_count           = 1
-    max_count           = 3
-    max_pods            = 30
+    auto_scaling_enabled = true
+    min_count            = 1
+    max_count            = 3
+    max_pods             = 30
   }
 
   network_profile {
