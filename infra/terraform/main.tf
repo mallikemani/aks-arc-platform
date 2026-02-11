@@ -43,11 +43,11 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   default_node_pool {
-    name                = "system"
-    vm_size             = var.system_node_vm_size
-    vnet_subnet_id      = azurerm_subnet.aks.id
-    type                = "VirtualMachineScaleSets"
-    os_disk_size_gb     = 50
+    name            = "system"
+    vm_size         = var.system_node_vm_size
+    vnet_subnet_id  = azurerm_subnet.aks.id
+    type            = "VirtualMachineScaleSets"
+    os_disk_size_gb = 50
 
     enable_auto_scaling = true
     min_count           = 1
@@ -62,6 +62,6 @@ resource "azurerm_kubernetes_cluster" "aks" {
   }
 
   role_based_access_control_enabled = true
-  tags = var.tags
+  tags                              = var.tags
 }
 

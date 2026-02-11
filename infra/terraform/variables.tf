@@ -21,22 +21,22 @@ variable "env" {
 }
 
 variable "vnet_cidr" {
-  type        = string
-  default     = "10.60.0.0/16"
+  type    = string
+  default = "10.60.0.0/16"
 }
 
 variable "aks_subnet_cidr" {
-  type        = string
-  default     = "10.60.1.0/24"
+  type    = string
+  default = "10.60.1.0/24"
 }
 
 variable "system_node_vm_size" {
-  type        = string
-  default     = "Standard_D2s_v5"
+  type    = string
+  default = "Standard_D2s_v5"
 }
 
 variable "tags" {
-  type        = map(string)
+  type = map(string)
   default = {
     project = "aks-arc"
     env     = "dev"
